@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "Focus on the tweets",
+    "version": "1.0.0",
+    "description": "This is a sample description",
+    "short_name": "Short Sample Name",
+    "permissions": [
+        "tabs",
+        "declarativeContent",
+        "storage",
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://twitter.com/Brian_Burrous",
+                "http://twitter.com/Brian_Burrous"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "browser_action": {
+        "default_title": "Does a thing when you do a thing",
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "32": "icons/icon32.png"
+        }
+    }
+}
+
